@@ -1,48 +1,35 @@
 # Papers arXiv Copy
 
-A Chrome extension that adds **one-click arXiv link copy buttons** to [HuggingFace Daily Papers](https://huggingface.co/papers) and [alphaXiv](https://www.alphaxiv.org/) pages.
+一款 Chrome 浏览器扩展，为 [HuggingFace Daily Papers](https://huggingface.co/papers) 和 [alphaXiv](https://www.alphaxiv.org/) 页面添加一键复制 arXiv 链接的按钮，方便快速获取论文原始链接。
 
-## Features
+## 功能
 
-- **HuggingFace Papers**: Adds an `arXiv` badge on each paper's thumbnail. Click the badge to copy the `arxiv.org/abs/` link to your clipboard.
-- **alphaXiv**: Adds an `arXiv PDF` pill button in each paper card's action bar. Click to copy the `arxiv.org/pdf/` link.
-- Visual feedback: button turns green and shows "Copied!" on success.
-- Automatically handles dynamically loaded content via MutationObserver.
+- **HuggingFace Papers**：在每篇论文缩略图上叠加红色 arXiv 徽章按钮，点击即复制  链接到剪贴板，同时将缩略图链接替换为 arXiv 页面。
+- **alphaXiv**：在论文卡片底部操作栏添加 arXiv PDF 药丸按钮，点击即复制  链接。
+- 点击后按钮短暂变为绿色 Copied! 反馈，1.5 秒后自动恢复。
+- 支持页面动态加载（MutationObserver），无需手动刷新。
 
-## Screenshots
+## 效果展示
 
-| HuggingFace Daily Papers | alphaXiv |
-|:---:|:---:|
-| ![HuggingFace Papers](asset/huggingface.png) | ![alphaXiv](asset/alphaxiv.png) |
+**HuggingFace Daily Papers 页面：**
 
-## Installation
+![HuggingFace Demo](asset/huggingface_daily.png)
 
-1. Clone or download this repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** (top-right toggle).
-4. Click **Load unpacked** and select the extension folder.
+**alphaXiv 页面：**
 
-## File Structure
+![alphaXiv Demo](asset/alphaxiv.png)
 
-```
-├── manifest.json   # Extension manifest (Manifest V3)
-├── content.js      # Core logic: injects copy buttons on matched pages
-├── style.css       # Styles for the arXiv badge and pill button
-├── asset/          # Screenshots
-│   ├── huggingface.png
-│   └── alphaxiv.png
-└── README.md
-```
+## 安装
 
-## Usage
+1. 下载或克隆本仓库
+2. 打开 Chrome，进入 
+3. 开启右上角**开发者模式**
+4. 点击**加载已解压的扩展程序**，选择本项目文件夹
 
-After installation, simply visit:
+## 文件结构
 
-- `https://huggingface.co/papers` — an arXiv badge appears on each paper thumbnail.
-- `https://www.alphaxiv.org/` — an arXiv PDF button appears in each paper card's action bar.
 
-Click the button to copy the corresponding arXiv link to your clipboard.
 
-## Permissions
+## 权限说明
 
-- `clipboardWrite` — required to copy links to the clipboard.
+本扩展仅请求  权限，用于将链接写入剪贴板，不收集任何用户数据。
