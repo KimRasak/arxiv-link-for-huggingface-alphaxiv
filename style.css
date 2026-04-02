@@ -1,0 +1,72 @@
+.arxiv-badge {
+  position: absolute !important;
+  left: 8px !important;
+  bottom: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  padding: 2px 5px !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  background: rgba(180, 30, 30, 0.88) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+  backdrop-filter: blur(4px) !important;
+  transition: background 0.15s ease !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+  pointer-events: auto !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3) !important;
+}
+
+.arxiv-badge:hover {
+  background: rgba(200, 20, 20, 1) !important;
+}
+
+.arxiv-badge.copied {
+  background: rgba(5, 150, 105, 0.92) !important;
+}
+
+.arxiv-badge svg {
+  width: 9px !important;
+  height: 9px !important;
+  flex-shrink: 0 !important;
+}
+
+/* alphaXiv: inline pill button in the action bar */
+.arxiv-copy-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  height: 32px !important;
+  padding: 6px 10px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+  white-space: nowrap !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  background: rgba(180, 30, 30, 0.12) !important;
+  color: rgb(180, 30, 30) !important;
+}
+
+.arxiv-copy-pill:hover {
+  background: rgba(180, 30, 30, 0.22) !important;
+}
+
+.arxiv-copy-pill.copied {
+  background: rgba(5, 150, 105, 0.15) !important;
+  color: rgb(5, 150, 105) !important;
+}
+
+.arxiv-copy-pill svg {
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+}

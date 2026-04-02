@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Papers arXiv Copy",
+  "version": "2.0",
+  "description": "为 HuggingFace Daily Papers 和 alphaXiv 页面添加 arXiv 链接复制按钮",
+  "content_scripts": [
+    {
+      "matches": ["https://huggingface.co/papers*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.alphaxiv.org/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["clipboardWrite"]
+}
