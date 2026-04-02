@@ -41,7 +41,7 @@
       if (!arxivId) return;
       article.dataset.arxivDone = "1";
 
-      const arxivUrl = "https://arxiv.org/abs/" + arxivId;
+      const arxivUrl = "https://arxiv.org/pdf/" + arxivId;
 
       if (thumbLink) {
         thumbLink.href = arxivUrl;
@@ -52,7 +52,7 @@
         const badge = document.createElement("span");
         badge.className = "arxiv-badge";
         badge.title = "Click to copy: " + arxivUrl;
-        badge.innerHTML = COPY_SVG_WHITE + '<span style="color:white">arXiv</span>';
+        badge.innerHTML = COPY_SVG_WHITE + '<span style="color:white">arXiv PDF</span>';
 
         badge.addEventListener("click", (e) => {
           e.preventDefault();
@@ -63,7 +63,7 @@
           badge.innerHTML = CHECK_SVG_WHITE + '<span style="color:white">Copied!</span>';
           setTimeout(() => {
             badge.classList.remove("copied");
-            badge.innerHTML = COPY_SVG_WHITE + '<span style="color:white">arXiv</span>';
+            badge.innerHTML = COPY_SVG_WHITE + '<span style="color:white">arXiv PDF</span>';
           }, 1500);
           return false;
         }, true);
